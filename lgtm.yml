@@ -1,0 +1,10 @@
+extraction:
+  c:
+     prepare:
+        packages: 
+          - gcc
+          - g++
+          - python
+          - make
+          - cmake
+          - libc-dbg
