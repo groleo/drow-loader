@@ -64,7 +64,7 @@ class DebugData:
                     self.write_back_line ()
                     return item
                 item.attributes[result.group (1)] = result.group (3)
-        return item
+
     def find_struct (self, struct_type_name):
         return self.find_by_name ('DW_TAG_structure_type', struct_type_name)
     def find_by_name (self, type, name):
@@ -198,7 +198,7 @@ def list_lib_path():
                 if re_lib.search (line) is not None:
                     continue
                 paths.append(line.rstrip ())
-        except:
+        except Exception:
             continue
     return ':'.join(paths)
 
